@@ -28,7 +28,8 @@ $maMoto = new Deux_roues("rouge", 150);
 echo "<h2 class='h2'>Affichage du Deux-Roues</h2>";
 echo "<p>Couleur : " . $maMoto->getCouleur() . "</p>";
 echo '<p class="poid">Poids : ' . $maMoto->getPoids() . ' kg</p>';
-
+$maMoto->ajouter_personne(70);
+echo '<p class="poid">Poids : ' . $maMoto->getPoids() . ' kg</p>';
 ?>
 
 
