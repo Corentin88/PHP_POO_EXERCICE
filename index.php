@@ -11,7 +11,11 @@
 class Vehicule {
     private $couleur;
     private $poids;
-
+private function __construct($couleur = '' , $poids = '')
+{
+    $this->couleur = $couleur;
+    $this->poids = $poids;
+}
     public function rouler() {
         echo "Le véhicule roule.\n";
     }
