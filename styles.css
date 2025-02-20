@@ -9,3 +9,10 @@
 .newPoid{
     color: blue;
 }
+.partie{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid black;
+    width: 25%;
+}

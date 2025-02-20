@@ -9,7 +9,6 @@ class Camion extends Quatre_roues {
         $this->longueur += $longueur_remorque;
     }
 
-    // Getters et Setters
     public function getLongueur() {
         return $this->longueur;
     }

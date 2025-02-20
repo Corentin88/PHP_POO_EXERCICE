@@ -12,7 +12,6 @@ class Voiture extends Quatre_roues {
         $this->nombre_pneu_neige = max(0, $this->nombre_pneu_neige - $nombre);
     }
 
-    // Getters et Setters
     public function getNombrePneuNeige() {
         return $this->nombre_pneu_neige;
     }

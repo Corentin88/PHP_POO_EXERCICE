@@ -3,7 +3,7 @@ class Vehicule
 {
     private $couleur;
     private $poids;
-    public function __construct($couleur = '', $poids = '')
+    public function __construct($couleur, $poids )
     {
         $this->couleur = $couleur;
         $this->poids = $poids;
@@ -18,7 +18,6 @@ class Vehicule
         $this->poids += $poids_personne;
     }
 
-    // Getters et Setters
     public function getCouleur()
     {
         return $this->couleur;
