@@ -1,5 +1,5 @@
 <?php
-require_once "Quatre_roues.class.php";
+require_once "QuatreRoues.class.php";
 
 
 class Camion extends Quatre_roues {

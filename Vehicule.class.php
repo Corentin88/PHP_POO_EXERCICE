@@ -1,39 +1,41 @@
 <?php
-class Vehicule {
+class Vehicule
+{
     private $couleur;
     private $poids;
-private function __construct($couleur = '' , $poids = '')
-{
-    $this->couleur = $couleur;
-    $this->poids = $poids;
-}
-    public function rouler() {
-        echo "Le véhicule roule.\n";
+    public function __construct($couleur = '', $poids = '')
+    {
+        $this->couleur = $couleur;
+        $this->poids = $poids;
+    }
+    public function rouler()
+    {
+        echo '<h2 class="h2">Le véhicule roule.</h2><br>';
     }
 
-    public function ajouter_personne($poids_personne) {
+    public function ajouter_personne($poids_personne)
+    {
         $this->poids += $poids_personne;
     }
 
     // Getters et Setters
-    public function getCouleur() {
+    public function getCouleur()
+    {
         return $this->couleur;
     }
 
-    public function setCouleur($couleur) {
+    public function setCouleur($couleur)
+    {
         $this->couleur = $couleur;
     }
 
-    public function getPoids() {
+    public function getPoids()
+    {
         return $this->poids;
     }
 
-    public function setPoids($poids) {
+    public function setPoids($poids)
+    {
         $this->poids = $poids;
     }
 }
-
-
-
-
-?>
