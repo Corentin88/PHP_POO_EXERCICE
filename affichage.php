@@ -2,6 +2,7 @@
 require_once "Vehicule.class.php";
 require_once "QuatreRoues.class.php";
 require_once "Voitures.class.php";
+require_once "DeuxRoues.class.php"
 ?>
 
 
@@ -74,7 +75,17 @@ require_once "Voitures.class.php";
         $maVoiture->ajouter_pneu_neige(2);
 
         echo '<p class="couleur"> Nouvelle couleur de la voiture est ' . $maVoiture->getCouleur() . ' et il y a ' . $maVoiture->getNombrePneuNeige() .' pneus neige </p><br>';
-  ?>
+
+ ?>        
+ <h2>Partie 3-3</h2>
+<?php
+$maMoto = new deux_roues("noir", 120);
+echo 'Le poids de la moto est de '.$maMoto->getPoids(). 'kg<br>';
+$maMoto->ajouter_personne(80);
+echo 'Poids avec pilote est de '.$maMoto->getPoids(). 'kg<br>';
+$maMoto->mettre_essence(20);
+
+?>
     </div>
 
 </body>
