@@ -2,7 +2,8 @@
 require_once "Vehicule.class.php";
 require_once "QuatreRoues.class.php";
 require_once "Voitures.class.php";
-require_once "DeuxRoues.class.php"
+require_once "DeuxRoues.class.php";
+require_once "Camion.class.php";
 ?>
 
 
@@ -74,22 +75,28 @@ require_once "DeuxRoues.class.php"
         $maVoiture->repeindre("rouge");
         $maVoiture->ajouter_pneu_neige(2);
 
-        echo '<p class="couleur"> Nouvelle couleur de la voiture est ' . $maVoiture->getCouleur() . ' et il y a ' . $maVoiture->getNombrePneuNeige() .' pneus neige </p><br>';
+        echo '<p class="couleur"> Nouvelle couleur de la voiture est ' . $maVoiture->getCouleur() . ' et il y a ' . $maVoiture->getNombrePneuNeige() . ' pneus neige </p><br>';
 
- ?>        
- <h2>Partie 3-3</h2>
-<?php
-$maMoto = new deux_roues("noire", 120);
-echo 'Le poids de la moto est de '.$maMoto->getPoids(). 'kg<br>';
-$maMoto->ajouter_personne(80);
-echo 'Poids avec pilote est de '.$maMoto->getPoids(). 'kg<br>';
-$maMoto->mettre_essence(20);
-echo '<p class="newPoid"> Nouveau poids de la moto '. $maMoto->getCouleur(). ' après ajout du pilote et de l\'essence : ' . $maMoto->getPoids() . ' kg.</p><br>';
+        ?>
+        <h2>Partie 3-3</h2>
+        <?php
+        $maMoto = new deux_roues("noire", 120);
+        echo 'Le poids de la moto est de ' . $maMoto->getPoids() . 'kg<br>';
+        $maMoto->ajouter_personne(80);
+        echo 'Poids avec pilote est de ' . $maMoto->getPoids() . 'kg<br>';
+        $maMoto->mettre_essence(20);
+        echo '<p class="newPoid"> Nouveau poids de la moto ' . $maMoto->getCouleur() . ' après ajout du pilote et de l\'essence : ' . $maMoto->getPoids() . ' kg.</p><br>';
 
-?>
+        ?>
+        <h2>Partie 3-4</h2>
+        <?php
+
+        $monCamion = new Camion("bleu", 10000, 2, 10);
+        ?>
+
     </div>
 
 </body>
-              var_dump($maVoiture)
+var_dump($maVoiture)
 
 </html>
