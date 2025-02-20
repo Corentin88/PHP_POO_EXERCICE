@@ -7,8 +7,7 @@ class Camion extends Quatre_roues
     private $longueur;
     public function __construct($couleur, $poids, $nombre_porte, $longueur)
     {
-        parent::__construct($couleur, $poids);
-        $this->setNombrePorte($nombre_porte);
+        parent::__construct($couleur, $poids, $nombre_porte);
         $this->longueur = $longueur;
     }
 

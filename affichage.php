@@ -92,11 +92,16 @@ require_once "Camion.class.php";
         <?php
 
         $monCamion = new Camion("bleu", 10000, 2, 10);
+
+        // echo "<pre>";
+        // var_dump($monCamion);
+        // echo "</pre>";
+
+        echo '<p class="newPoid"> Le camion est ' . $monCamion->getCouleur() . ', il pèse ' . $monCamion->getPoids() . ' kg, il mesure ' . $monCamion->getLongueur() . ' mètres  et il dispose de ' . $monCamion->getNombrePorte() . ' portes.</p><br>';
         ?>
 
     </div>
 
 </body>
-var_dump($maVoiture)
 
 </html>
