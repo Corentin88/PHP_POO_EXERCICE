@@ -36,6 +36,24 @@ echo '<p> La cylindrée est de '.$maMoto->getCylindree(). ' cm3</p>';
 
 echo "<h2>Affichage attributs du Deux-Roues</h2>";
 Vehicule::afficher_attribut($maMoto);
+
+
+echo "<h2 class='h2'>Affichage du Camion</h2>";
+// Création du camion blanc de 6000 kg
+$monCamion = new Camion("blanc", 6000, 2,"");
+echo "<p>Le camion est ".$monCamion->getCouleur()." et il pèse " .$monCamion->getPoids()." kg et il dispose de ".$monCamion->getNombrePorte()." portes.</p>";
+
+// Ajouter une personne de 84 kg
+$monCamion->ajouter_personne(84);
+
+// Repeindre en bleu
+$monCamion->repeindre("bleu");
+echo "<p>Le camion est maintenant ".$monCamion->getCouleur()." et il pèse " .$monCamion->getPoids()." kg et il dispose de ".$monCamion->getNombrePorte()." portes.</p>";
+// Affichage des attributs
+echo "<h2>Affichage attributs du Camion</h2>";
+Vehicule::afficher_attribut($monCamion);
+
+
 ?>
 
 
