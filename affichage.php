@@ -79,11 +79,12 @@ require_once "DeuxRoues.class.php"
  ?>        
  <h2>Partie 3-3</h2>
 <?php
-$maMoto = new deux_roues("noir", 120);
+$maMoto = new deux_roues("noire", 120);
 echo 'Le poids de la moto est de '.$maMoto->getPoids(). 'kg<br>';
 $maMoto->ajouter_personne(80);
 echo 'Poids avec pilote est de '.$maMoto->getPoids(). 'kg<br>';
 $maMoto->mettre_essence(20);
+echo '<p class="newPoid"> Nouveau poids de la moto '. $maMoto->getCouleur(). ' après ajout du pilote et de l\'essence : ' . $maMoto->getPoids() . ' kg.</p><br>';
 
 ?>
     </div>
