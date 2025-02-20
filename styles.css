@@ -14,5 +14,8 @@
     flex-direction: column;
     text-align: center;
     border: 1px solid black;
-    width: 25%;
+    width: 50%;
+}
+.couleur{
+    color: rgb(31, 253, 2);
 }
