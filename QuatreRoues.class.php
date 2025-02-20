@@ -11,10 +11,7 @@ class Quatre_roues extends Vehicule
         parent::__construct($couleur, $poids);
         $this->nombre_porte = $nombre_porte;
     }
-    public function repeindre($couleur)
-    {
-        $this->setCouleur($couleur);
-    }
+
 
     public function getNombrePorte()
     {

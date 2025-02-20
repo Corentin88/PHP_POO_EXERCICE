@@ -30,6 +30,7 @@ echo "<p>Couleur : " . $maMoto->getCouleur() . "</p>";
 echo '<p class="poid">Poids : ' . $maMoto->getPoids() . ' kg</p>';
 $maMoto->ajouter_personne(70);
 echo '<p class="poid">Poids : ' . $maMoto->getPoids() . ' kg</p>';
+$maMoto->repeindre("vert");
 ?>
 
 
