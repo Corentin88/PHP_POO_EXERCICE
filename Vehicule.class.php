@@ -1,9 +1,9 @@
 <?php
-class Vehicule
+abstract class Vehicule
 {
-    private $couleur;
-    private $poids;
-    public function __construct($couleur, $poids )
+    protected $couleur;
+    protected $poids;
+    public function __construct($couleur, $poids)
     {
         $this->couleur = $couleur;
         $this->poids = $poids;
@@ -12,11 +12,7 @@ class Vehicule
     {
         echo '<h2 class="h2">Le véhicule roule.</h2><br>';
     }
-
-    public function ajouter_personne($poids_personne)
-    {
-        $this->poids += $poids_personne;
-    }
+    abstract public function ajouter_personne($poids_personne);
 
     public function getCouleur()
     {
@@ -37,5 +33,9 @@ class Vehicule
     {
         $this->poids = $poids;
     }
+    public static function afficher_attribut(Vehicule $vehicule)
+    {
+        echo "<p>Couleur : " . $vehicule->getCouleur() . "<br>";
+        echo "Poids : " . $vehicule->getPoids() . " kg</p>";
+    }
 }
-?>

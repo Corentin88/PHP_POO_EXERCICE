@@ -20,5 +20,11 @@ class Deux_roues extends Vehicule {
     public function setCylindree($cylindree) {
         $this->cylindree = $cylindree;
     }
+    public function ajouter_personne($poids_personne)
+    {
+        $poids_total = $poids_personne + 2;
+        $this->poids += $poids_total;
+        echo "Ajout d'une personne de $poids_personne kg. Nouveau poids : " . $this->getPoids() . " kg.<br>";
+    }
 }
 ?>
