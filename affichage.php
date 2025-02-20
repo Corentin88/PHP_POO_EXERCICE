@@ -23,7 +23,7 @@ require_once "Camion.class.php";
 
 <?php
 
-$maMoto = new Deux_roues("rouge", 150);
+$maMoto = new Deux_roues("rouge", 150,1000 );
 
 echo "<h2 class='h2'>Affichage du Deux-Roues</h2>";
 echo "<p>Couleur : " . $maMoto->getCouleur() . "</p>";
@@ -31,6 +31,7 @@ echo '<p class="poid">Poids : ' . $maMoto->getPoids() . ' kg</p>';
 $maMoto->ajouter_personne(70);
 echo '<p class="poid">Poids : ' . $maMoto->getPoids() . ' kg</p>';
 $maMoto->repeindre("vert");
+echo '<p> La cylindrée est de '.$maMoto->getCylindree(). ' cm3</p>';
 ?>
 
 

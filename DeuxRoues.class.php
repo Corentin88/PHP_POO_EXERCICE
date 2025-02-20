@@ -4,9 +4,10 @@ require_once "Vehicule.class.php";
 class Deux_roues extends Vehicule {
     private $cylindree;
 
-    public function __construct($couleur, $poids )
+    public function __construct($couleur, $poids, $cylindree )
     {
         parent::__construct($couleur, $poids);
+        $this->cylindree = $cylindree;
     }
 
     public function mettre_essence($nombre_litre) {
@@ -19,6 +20,7 @@ class Deux_roues extends Vehicule {
 
     public function setCylindree($cylindree) {
         $this->cylindree = $cylindree;
+
     }
     public function ajouter_personne($poids_personne)
     {
