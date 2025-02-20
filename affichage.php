@@ -32,6 +32,10 @@ $maMoto->ajouter_personne(70);
 echo '<p class="poid">Poids : ' . $maMoto->getPoids() . ' kg</p>';
 $maMoto->repeindre("vert");
 echo '<p> La cylindrée est de '.$maMoto->getCylindree(). ' cm3</p>';
+
+
+echo "<h2>Affichage attributs du Deux-Roues</h2>";
+Vehicule::afficher_attribut($maMoto);
 ?>
 
 

@@ -36,12 +36,13 @@ abstract class Vehicule
     public function repeindre($couleur)
     {
         $this->setCouleur($couleur);
-        echo "Véhicule repeint en : " .$this->getCouleur();
+        return "Véhicule repeint en : " .$this->getCouleur();
     }
 
     public static function afficher_attribut(Vehicule $vehicule)
     {
-        echo "<p>Couleur : " . $vehicule->getCouleur() . "<br>";
-        echo "Poids : " . $vehicule->getPoids() . " kg</p>";
+        echo "<pre>";
+        print_r($vehicule);
+        echo "</pre>";
     }
 }
