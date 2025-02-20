@@ -1,4 +1,7 @@
 <?php
+require_once "Vehicule.class.php";
+
+
 class Quatre_roues extends Vehicule {
     private $nombre_porte;
 

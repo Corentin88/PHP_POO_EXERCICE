@@ -1,4 +1,5 @@
 <?php
+require_once "Quatre_roues.class.php";
 class Voiture extends Quatre_roues {
     private $nombre_pneu_neige;
 
