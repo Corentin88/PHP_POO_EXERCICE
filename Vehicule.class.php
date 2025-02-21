@@ -42,11 +42,15 @@ abstract class Vehicule
 
     public function setPoids($poids)
     {
-        if ($poids > 2100) {
-            echo "Poids trop élevé ! Le poids maximal est de 2100 kg." . self::SAUT_DE_LIGNE;
-            $this->poids = 2100;
-        } else {
+        if ($this instanceof Camion) {
             $this->poids = $poids;
+        } else {
+            if ($poids > 2100) {
+                echo "Poids trop élevé ! Le poids maximal est de 2100 kg." . self::SAUT_DE_LIGNE;
+                $this->poids = 2100;
+            } else {
+                $this->poids = $poids;
+            }
         }
     }
 
