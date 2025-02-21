@@ -64,6 +64,7 @@ abstract class Vehicule
         if ($vehicule instanceof Voiture) {
             echo "Nombre de portes : " . $vehicule->getNombrePortes() . self::SAUT_DE_LIGNE;
             echo "Nombre de pneus neige : " . $vehicule->getNombrePneuNeige() . self::SAUT_DE_LIGNE;
+            echo "Nombre de changements de couleur : " . self::$nombre_changement_couleur . self::SAUT_DE_LIGNE;
         }
     }
 }

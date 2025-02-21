@@ -58,10 +58,12 @@ require_once "Camion.class.php";
 
     $maVoiture = new Voiture("verte", 2100, 4);
     Vehicule::afficher_attribut($maVoiture);
-    
     $maVoiture->ajouter_personne(80);
     $maVoiture->ajouter_pneu_neige(2);
-
+    Vehicule::afficher_attribut($maVoiture);
+    $maVoiture->enlever_pneu_neige(4);
+    $maVoiture->setCouleur("Bleue");
+    $maVoiture->repeindre("Noire");
     Vehicule::afficher_attribut($maVoiture);
 
     ?>
