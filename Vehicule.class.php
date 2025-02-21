@@ -3,7 +3,8 @@ abstract class Vehicule
 {
     protected $couleur;
     protected $poids;
-    
+    protected static $nombre_changement_couleur = 0;
+
     public const SAUT_DE_LIGNE = "<br>";
 
     public function __construct($couleur, $poids)
@@ -26,7 +27,12 @@ abstract class Vehicule
 
     public function setCouleur($couleur)
     {
-        $this->couleur = $couleur;
+        if($this->couleur !== $couleur){
+            $this->couleur = $couleur;
+            self::$nombre_changement_couleur++;
+            echo "Couleur changée en : " . $this->getCouleur() . self::SAUT_DE_LIGNE;
+            echo "Nombre total de changements de couleur : " . self::$nombre_changement_couleur . self::SAUT_DE_LIGNE;
+        }
     }
 
     public function getPoids()
