@@ -1,6 +1,6 @@
 <?php
 require_once "QuatreRoues.class.php";
-
+require_once "action.php";
 
 class Camion extends Quatre_roues
 {
@@ -15,7 +15,11 @@ class Camion extends Quatre_roues
     {
         $this->longueur += $longueur_remorque;
     }
-
+    public function mettre_essence(int $nombre_litre): void
+    {
+        $this->setPoids($this->getPoids() + $nombre_litre);  // Ajoute le poids de l'essence
+        echo "Ajout de $nombre_litre litres d'essence. Nouveau poids du camion : " . $this->getPoids() . " kg.<br>";
+    }
     public function getLongueur()
     {
         return $this->longueur;
