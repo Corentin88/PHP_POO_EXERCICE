@@ -27,7 +27,7 @@ abstract class Vehicule
 
     public function setCouleur($couleur)
     {
-        if($this->couleur !== $couleur){
+        if ($this->couleur !== $couleur) {
             $this->couleur = $couleur;
             self::$nombre_changement_couleur++;
             echo "Couleur changée en : " . $this->getCouleur() . self::SAUT_DE_LIGNE;
@@ -42,7 +42,12 @@ abstract class Vehicule
 
     public function setPoids($poids)
     {
-        $this->poids = $poids;
+        if ($poids > 2100) {
+            echo "Poids trop élevé ! Le poids maximal est de 2100 kg." . self::SAUT_DE_LIGNE;
+            $this->poids = 2100; // On limite à 2100 kg
+        } else {
+            $this->poids = $poids;
+        }
     }
 
     public function repeindre($couleur)
@@ -56,8 +61,5 @@ abstract class Vehicule
         echo "<strong>Attributs du véhicule :</strong>" . self::SAUT_DE_LIGNE;
         echo "Couleur : " . $vehicule->getCouleur() . self::SAUT_DE_LIGNE;
         echo "Poids : " . $vehicule->getPoids() . " kg" . self::SAUT_DE_LIGNE;
-
-        
     }
 }
-?>
