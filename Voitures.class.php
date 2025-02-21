@@ -31,7 +31,9 @@ class Voiture extends Quatre_roues
     }
     public function ajouter_personne($poids_personne)
     {
-        parent::__construct($poids_personne);
+        $this->poids += $poids_personne;
+        echo "<p>Ajout d'une personne de $poids_personne kg. Nouveau poids du véhicule : " . $this->getPoids() . " kg.</p><br>";
+
         if ($this->getPoids() >= 1500 && $this->nombre_pneu_neige <= 2) {
             echo "<p>Attention, veuillez mettre 4 pneus neige.</p><br>";
         }

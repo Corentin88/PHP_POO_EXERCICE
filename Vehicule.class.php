@@ -44,7 +44,7 @@ abstract class Vehicule
     {
         if ($poids > 2100) {
             echo "Poids trop élevé ! Le poids maximal est de 2100 kg." . self::SAUT_DE_LIGNE;
-            $this->poids = 2100; 
+            $this->poids = 2100;
         } else {
             $this->poids = $poids;
         }
@@ -63,6 +63,7 @@ abstract class Vehicule
         echo "Poids : " . $vehicule->getPoids() . " kg" . self::SAUT_DE_LIGNE;
         if ($vehicule instanceof Voiture) {
             echo "Nombre de portes : " . $vehicule->getNombrePortes() . self::SAUT_DE_LIGNE;
+            echo "Nombre de pneus neige : " . $vehicule->getNombrePneuNeige() . self::SAUT_DE_LIGNE;
         }
     }
 }
