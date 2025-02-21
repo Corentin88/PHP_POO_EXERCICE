@@ -4,23 +4,23 @@ require_once "Vehicule.class.php";
 
 class Quatre_roues extends Vehicule
 {
-    private $nombre_porte;
+    private $nombrePortes;
 
-    public function __construct($couleur, $poids, $nombre_porte)
+    public function __construct($couleur, $poids, $nombrePortes)
     {
         parent::__construct($couleur, $poids);
-        $this->nombre_porte = $nombre_porte;
+        $this->nombrePortes = $nombrePortes;
     }
 
 
-    public function getNombrePorte()
+    public function getNombrePortes()
     {
-        return $this->nombre_porte;
+        return $this->nombrePortes;
     }
 
-    public function setNombrePorte($nombre_porte)
+    public function setNombrePorte($nombrePortes)
     {
-        $this->nombre_porte = $nombre_porte;
+        $this->nombrePortes = $nombrePortes;
     }
     public function ajouter_personne($poids_personne) {
         $this->poids += $poids_personne;
