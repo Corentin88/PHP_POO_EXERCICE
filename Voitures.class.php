@@ -7,7 +7,7 @@ class Voiture extends Quatre_roues
     public function __construct($couleur, $poids, $nombre_porte)
     {
         parent::__construct($couleur, $poids, $nombre_porte);
-        $this->nombre_pneu_neige = 0; 
+        $this->nombre_pneu_neige = 0;
     }
 
     public function ajouter_pneu_neige($nombre)
@@ -28,5 +28,12 @@ class Voiture extends Quatre_roues
     public function setNombrePneuNeige($nombre_pneu_neige)
     {
         $this->nombre_pneu_neige = $nombre_pneu_neige;
+    }
+    public function ajouter_personne($poids_personne)
+    {
+        parent::__construct($poids_personne);
+        if ($this->getPoids() >= 1500 && $this->nombre_pneu_neige <= 2) {
+            echo "<p>Attention, veuillez mettre 4 pneus neige.</p><br>";
+        }
     }
 }
