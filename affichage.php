@@ -73,6 +73,9 @@ require_once "Camion.class.php";
     $monCamion->mettre_essence(100);
     Vehicule::afficher_attribut($monCamion);
     $monCamion->repeindre("vert");
+    Vehicule::afficher_attribut($monCamion);
+
+
     ?>
 
 
