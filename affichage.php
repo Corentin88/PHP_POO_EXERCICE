@@ -64,16 +64,16 @@ require_once "Camion.class.php";
     $maVoiture->enlever_pneu_neige(4);
     $maVoiture->setCouleur("Bleue");
     $maVoiture->repeindre("Noire");
-    Vehicule::afficher_attribut($maVoiture); 
+    Vehicule::afficher_attribut($maVoiture);
     ?>
     <h2 class="h2">Partie 6</h2>
-   <?php
-$monCamion = new Camion("Bleu", 10000,2,10);
-echo "<p>Le camion est " . $monCamion->getCouleur() . " et il pèse " . $monCamion->getPoids() . " kg et il dispose de " . $monCamion->getNombrePortes() . " portes.Et mesure ". $monCamion->getLongueur()." mètres.</p>";
-$monCamion->mettre_essence(100);
-Vehicule::afficher_attribut($monCamion);
-
-   ?>
+    <?php
+    $monCamion = new Camion("Bleu", 10000, 2, 10);
+    echo "<p>Le camion est " . $monCamion->getCouleur() . " et il pèse " . $monCamion->getPoids() . " kg et il dispose de " . $monCamion->getNombrePortes() . " portes.Et mesure " . $monCamion->getLongueur() . " mètres.</p>";
+    $monCamion->mettre_essence(100);
+    Vehicule::afficher_attribut($monCamion);
+    $monCamion->repeindre("vert");
+    ?>
 
 
 </body>

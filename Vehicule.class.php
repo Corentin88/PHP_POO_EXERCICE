@@ -11,6 +11,7 @@ abstract class Vehicule
     {
         $this->couleur = $couleur;
         $this->poids = $poids;
+        self::$nombre_changement_couleur = 0;
     }
 
     public function rouler()
